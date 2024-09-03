@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Chandra Shekhar Singh Rajput
+	cssrajput.github.io | @cssrajput
+	Free for personal and commercial use under the CCA 3.0 license (cssrajput.github.io/license)
+-->
+<html>
+<head>
+<title>Dhaval Karnatki</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<meta name="p:domain_verify" content="29fc9d71b575240105aff9d611e34c5b"/>
+</head>
+<script>function getAge(dateString) {
+		var now = new Date();
+		var today = new Date(now.getYear(),now.getMonth(),now.getDate());
+		var yearNow = now.getYear();
+		var monthNow = now.getMonth();
+		var dateNow = now.getDate();
+		var dob = new Date(dateString.substring(6,10),
+						   dateString.substring(0,2)-1,                   
+						   dateString.substring(3,5)                  
+						   );
+		var yearDob = dob.getYear();
+		var monthDob = dob.getMonth();
+		var dateDob = dob.getDate();
+		var age = {};
+		var ageString = "";
+		var yearString = "";
+		var monthString = "";
+		var dayString = "";
+
+		yearAge = yearNow - yearDob;
+		if (monthNow >= monthDob)
+		  var monthAge = monthNow - monthDob;
+		else {
+		  yearAge--;
+		  var monthAge = 12 + monthNow -monthDob;
+		}
+		if (dateNow >= dateDob)
+		  var dateAge = dateNow - dateDob;
+		else {
+		  monthAge--;
+		  var dateAge = 31 + dateNow - dateDob;
+		  if (monthAge < 0) {
+			monthAge = 11;
+			yearAge--;
+		  }
+		}
+		age = {
+			years: yearAge,
+			months: monthAge,
+			days: dateAge
+			};
+		if ( age.years > 1 ) yearString = " years";
+		else yearString = " year";
+		if ( age.months> 1 ) monthString = " months";
+		else monthString = " month";
+		if ( age.days > 1 ) dayString = " days";
+		else dayString = " day";
+
+		if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )
+		  ageString = age.years + yearString + ", " + age.months + monthString + ", and " + age.days + dayString ;
+		else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )
+		  ageString = "Only " + age.days + dayString;
+		else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )
+		  ageString = age.years + yearString + " Best Wishes!!";
+		else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )
+		  ageString = age.years + yearString + " and " + age.months + monthString;
+		else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )
+		  ageString = age.months + monthString + " and " + age.days + dayString;
+		else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )
+		  ageString = age.years + yearString + " and " + age.days + dayString;
+		else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )
+		  ageString = age.months + monthString;
+		else ageString = "Oops! Could not calculate age!";
+		return ageString;
+	  }</script>
+<body class="is-preload landing">
+<div id="page-wrapper">
+ 
+			<!-- Header -->
+<header id="header">
+<h1 id="logo"><a href="index.html">Dhaval Karnatki</a></h1>
+</header>
+ 
+			<!-- Banner -->
+<section id="banner">
+<div class="content">
+<header>
+<h2>I’m Dhaval Karnatki, </h2>
+<p>Over <script type="text/javascript">
+								document.write(getAge('09/18/2018'));
+</script> of experience in Full Stack development.</p>
+<small>Designed and deployed production-ready end to end code for Java EE, Spring Boot, and Microservices.</small>
+</header>
+</div>
+<a href="#one" class="goto-next scrolly">Next</a>
+</section>
+ 
+			<!-- Footer -->
+<footer id="footer">
+<ul class="icons">
+<li><a href="" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+<li><a href="" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+<li><a href="" class="icon alt fa-youtube"><span class="label">Youtube</span></a></li>
+<li><a href="" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+<li><a href="" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+<li><a href="" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+<li><a href="mailto:dhavalkarnatki@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+<li><a href="" class="icon alt fa-skype"><span class="label">Skype</span></a></li>
+</ul>
+<ul class="copyright">
+<li>&copy; cssrajput. All rights reserved.</li><li>Design: <a href="http://dhavalkarnatki.github.io">dhavalkarnatki</a></li>
+</ul>
+</footer>
+ 
+		</div>
+ 
+		<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+ 
+	</body>
+</html>
